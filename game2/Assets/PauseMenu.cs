@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject startMenu;
     public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,9 @@ public class PauseMenu : MonoBehaviour
     }
     public void quit()
     {
-        Application.Quit();
+        Time.timeScale = 0f;
+        startMenu.SetActive(true);
+        Cursor.visible = true;
     }
 
     public void Resume()
