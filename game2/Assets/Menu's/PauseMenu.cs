@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -33,9 +34,21 @@ public class PauseMenu : MonoBehaviour
     }
     public void quit()
     {
-        Time.timeScale = 0f;
-        startMenu.SetActive(true);
-        Cursor.visible = true;
+        if (SceneManager.GetActiveScene().name == "Lvl1")
+        {
+            Time.timeScale = 0f;
+            startMenu.SetActive(true);
+            Cursor.visible = true;
+            pauseMenu.SetActive(false);
+        }
+        else
+        {
+            SceneManager.LoadScene("Lvl1");
+            Time.timeScale = 0f;
+            startMenu.SetActive(true);
+            Cursor.visible = true;
+            pauseMenu.SetActive(false);
+        }        
     }
 
     public void Resume()

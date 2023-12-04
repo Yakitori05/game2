@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc58b3511508407418202711b1298f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
-  Player: {fileID: 0}
+  startPoint: {fileID: 8443229845598822673, guid: 912c59a4489ba3041b26d431b0ee4c31, type: 3}
+  Player: {fileID: 2973765180675726654, guid: 13bf0188ca2da3d4eb5c554747b315a9, type: 3}
 --- !u!61 &1893786252226252956
 BoxCollider2D:
   m_ObjectHideFlags: 0
